@@ -1,5 +1,8 @@
 .date {
   background-color: black;
+  flex-direction: column;
+  width: 5.5rem;
+  height: 5.5rem;
 }
 
 #Expense-Date__month {
