@@ -1,0 +1,21 @@
+.date {
+  background-color: black;
+}
+
+#Expense-Date__month {
+  color: grey;
+  text-decoration: solid;
+  text-align: center;
+}
+
+#Expense-Date__day {
+  color: grey;
+  text-decoration: solid;
+  text-align: center;
+}
+
+#Expense-Date__year {
+  color: grey;
+  text-decoration: solid;
+  text-align: center;
+}
