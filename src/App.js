@@ -3,10 +3,13 @@ import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
   const expenses = getExpenses();
+  const handleAddExpense = (expense) => {
+    console.log(expense);
+  };
   return (
     <div>
       <h2>Let's get started!</h2>
-      <NewExpense></NewExpense>
+      <NewExpense onAddExpense={handleAddExpense}></NewExpense>
       <Expenses expenses={expenses}></Expenses>
     </div>
   );
