@@ -1,16 +1,19 @@
+import React, { useState } from 'react';
 import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpense/NewExpense';
 
 function App() {
-  const expenses = getExpenses();
-  const handleAddExpense = (expense) => {
-    console.log(expense);
+  const [expenses, setExpenses] = useState(getExpenses());
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpenses) => {
+      return [expense, ...prevExpenses];
+    });
   };
   return (
     <div>
       <h2>Let's get started!</h2>
-      <NewExpense onAddExpense={handleAddExpense}></NewExpense>
-      <Expenses expenses={expenses}></Expenses>
+      <NewExpense onAddExpense={addExpenseHandler}></NewExpense>
+      <Expenses items={expenses} />
     </div>
   );
 }
