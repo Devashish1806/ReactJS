@@ -24,7 +24,7 @@ const ExpenseForm = (props) => {
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
-    props.onNewExpense(expenseData);
+    props.onSaveNewExpense(expenseData);
   };
   return (
     <form onSubmit={submitHandler}>
